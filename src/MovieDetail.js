@@ -44,7 +44,7 @@ function MovieDetail (props) {
           <Poster src={`${POSTER_PATH}${movie.poster_path}`} alt={movie.title} />
         </Overdrive>
         <div>
-          <h1 data-testid="resolved">{movie.title}</h1>
+          <h1 data-testid="movie-title">{movie.title}</h1>
           <h3>{movie.release_date}</h3>
           <p>{movie.overview}</p>
         </div>

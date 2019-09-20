@@ -1,7 +1,10 @@
 import React from "react";
 import { render, cleanup, waitForElement } from "@testing-library/react";
 import MovieDetail from "./MovieDetail";
+
+// has extra function like toHaveTextContent
 import "@testing-library/jest-dom/extend-expect";
+
 // axios will detect the __mocks__ folder and use the mock
 // https://www.youtube.com/watch?time_continue=4&v=Ngj2f1n9pUw - tutorial!
 import axiosMock from "axios";
@@ -28,9 +31,10 @@ it("fetches and displays data", async () => {
   const { getByTestId } = render(<MovieDetail url={url} match={match} />);
   expect(getByTestId("loading")).toHaveTextContent("Loading data ...");
 
-  const resolvedStuff = await waitForElement(() => getByTestId("resolved"))
+  const resolvedStuff = await waitForElement(() => getByTestId("movie-title"))
 
   expect(resolvedStuff).toHaveTextContent("LLLL")
+  expect(resolvedStuff.textContent).toBe("LLLL")
   expect(axiosMock.get).toHaveBeenCalledTimes(1)
   expect(axiosMock.get).toHaveBeenCalledWith(url)
 });
