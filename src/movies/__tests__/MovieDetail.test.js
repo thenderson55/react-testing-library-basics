@@ -1,6 +1,6 @@
 import React from "react";
 import { render, cleanup, waitForElement } from "@testing-library/react";
-import MovieDetail from "./MovieDetail";
+import MovieDetail from "../MovieDetail";
 
 // has extra function like toHaveTextContent
 import "@testing-library/jest-dom/extend-expect";

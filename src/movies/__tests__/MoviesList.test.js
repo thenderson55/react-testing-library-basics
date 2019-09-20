@@ -1,6 +1,6 @@
 import React from "react";
 import { render, cleanup, waitForElement } from "@testing-library/react";
-import MoviesList from "./MoviesList";
+import MoviesList from "../MoviesList";
 import { MemoryRouter } from "react-router-dom";
 
 // has extra function like toHaveTextContent

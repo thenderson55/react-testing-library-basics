@@ -1,7 +1,7 @@
 import React from "react";
 import { render, cleanup } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
-import Movie, { POSTER_PATH } from "./Movie";
+import Movie, { POSTER_PATH } from "../Movie";
 
 afterEach(() => {
   cleanup;

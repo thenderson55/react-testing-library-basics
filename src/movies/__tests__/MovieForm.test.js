@@ -1,6 +1,6 @@
 import React from "react";
 import { render, fireEvent, cleanup } from "@testing-library/react";
-import MovieForm from "./MovieForm";
+import MovieForm from "../MovieForm";
 
 
 // create a spy/mock 
